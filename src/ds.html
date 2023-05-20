@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .grid{
+            width: 100%;
+            height: 80px;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            align-items: center;
+        }
+        div{
+            border: 1px solid red;
+        }
+        .grid > div, .fir > div{
+            height: 100%;
+        }
+        .fir{
+            grid-column: 1/3;
+            display: grid;
+            grid-template-columns: 1fr 2fr 3fr;
+        }
+    </style>
+    <div class="grid">
+        <div class="fir">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sec"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

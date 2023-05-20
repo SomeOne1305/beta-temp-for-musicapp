@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Musico - react js music website" />
+    <meta
+      name="description"
+      content="This is created at aim of learning frontend deeply. It has a lot of music which insists you to listen them. :)"
+    />
+    <meta
+      name="keywords"
+      content="music, pop music, modern musics, musico, developer, beta"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Ahmadullo Xolmuminov" />
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Musico" />
+    <meta
+      name="description"
+      content="Musico - create your music world ! This is a website which is created at aim of learning frontend. "
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://gsome.com/" />
+    <meta property="og:title" content="Musico" />
+    <meta
+      property="og:description"
+      content="Musico - create your music world ! This is a website which is created at aim of learning frontend. "
+    />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="http://gsome.com/" />
+    <meta property="twitter:title" content="Musico" />
+    <meta
+      property="twitter:description"
+      content="Musico - create your music world ! This is a website which is created at aim of learning frontend. "
+    />
+    <meta property="twitter:image" content="" />
+    <!-- Website assets -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+    />
+    <title>Music</title>
+  </head>
+  <body>
+    <nav class="bg-white shadow-lg">
+      <div class="container py-2 px-0">
+        <div class="w-full p-2 flex justify-between items-center">
+          <!-- Logo -->
+          <a href="/">
+            <div class="w-auto h-10 flex items-center whitespace-nowrap">
+              <img
+                src="./dem.png"
+                width="30"
+                height="30"
+                class="mr-2"
+                alt="logo"
+              />
+              <h1
+                class="font-semibold text-2xl bg-clip-text text-transparent bg-logo"
+              >
+                Harmonic
+              </h1>
+            </div>
+          </a>
+          <div class="relative w-10 h-10">
+            <img
+              id="par"
+              src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
+              class="w-full h-full rounded-full select-none object-cover cursor-pointer hover:drop-shadow-3xl"
+              alt=""
+            />
+            <!-- Profile options start -->
+            <div
+              id="el"
+              class="w-auto origin-top-right invisible absolute right-0 z-50 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+              role="menu"
+              aria-orientation="vertical"
+              aria-hidden="true"
+            >
+              <div class="py-1 w-72" role="none">
+                <div class="flex px-4 py-2 w-auto items-center">
+                  <img
+                    src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
+                    class="w-10 h-10 select-none rounded-full object-cover"
+                    alt="profile image"
+                  />
+                  <div class="ml-3">
+                    <h3 class="text-base font-semibold select-none">
+                      Adrian McCallester
+                    </h3>
+                    <span class="text-sm text-gray-700 select-none"
+                      >adrian.mccalaster@gmail.com</span
+                    >
+                  </div>
+                </div>
+                <div class="flex justify-between px-4 py-2 mt-2">
+                  <div class="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="mr-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                      />
+                      <path
+                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                      />
+                    </svg>
+                    <span class="text-sm text-gray-700"
+                      ><label for="dark" class="select-none cursor-pointer"
+                        >Dark mode</label
+                      ></span
+                    >
+                  </div>
+                  <label
+                    class="relative inline-flex items-center cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      id="dark"
+                      value=""
+                      class="sr-only peer"
+                    />
+                    <div
+                      class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                    ></div>
+                  </label>
+                </div>
+                <hr class="my-1 border-gray-200" />
+                <a
+                  href="#"
+                  class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  role="menuitem"
+                >
+                  <div class="mr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-gear-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
+                      />
+                    </svg>
+                  </div>
+                  Account settings
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  role="menuitem"
+                >
+                  <div class="mr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-music-note-beamed"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"
+                      />
+                      <path
+                        d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"
+                      />
+                    </svg>
+                  </div>
+                  My musics
+                </a>
+                <hr class="my-1 border-gray-200" />
+                <form method="POST" action="/log-out">
+                  <button
+                    type="submit"
+                    class="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                    role="menuitem"
+                  >
+                    <div class="mr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-box-arrow-right"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                        />
+                      </svg>
+                    </div>
+                    Sign out
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Profile options end -->
+        </div>
+      </div>
+    </nav>
+    <!-- Advertisement (hire me) title start -->
+    <div class="w-full">
+      <div class="container max-sm:p-1">
+        <div class="swiper mySwiper mt-3 h-[340px] xl:h-[50vh] max-sm:h-[50vh]">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide relative px-4 bg-image-bg-2 rounded-lg bg-cover bg-no-repeat bg-center"
+            >
+              <div class="absolute top-4 left-4">
+                <h2 class="font-semibold text-white text-3xl mb-3">
+                  Ahmadullo Kholmuminov
+                </h2>
+                <div class="my-3 font-bold text-lg text-center">
+                  <span class="text-white">Frontend Developer</span>
+                </div>
+                <button
+                  class="my-1 ml-[34%] px-4 py-2 bg-primary-gr hover:shadow-md shadow-white active:bg-primary-gr-ch font-sans text-white text-lg rounded cursor-pointer"
+                >
+                  Hire me
+                </button>
+              </div>
+              <div
+                class="absolute bottom-4 right-4 p-1 flex bg-slate-100 rounded"
+              >
+                <div
+                  class="mx-2 p-1 hover:text-cyan-600 text-cyan-500 text-4xl max-sm:text-3xl"
+                >
+                  <a
+                    data-tooltip-target="tooltip-top"
+                    data-tooltip-placement="top"
+                    href="https://t.me/unnamed0000"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-telegram"></i>
+                  </a>
+                  <div
+                    id="tooltip-top"
+                    role="tooltip"
+                    class="absolute z-10 text-center invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    <span>Telegram</span>
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </div>
+                <div
+                  class="mx-2 p-1 hover:text-slate-800 text-slate-900 text-4xl max-sm:text-3xl"
+                >
+                  <a
+                    data-tooltip-target="tooltip-top-git"
+                    data-tooltip-placement="top"
+                    href="https://github.com/SomeOne1305"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <div
+                    id="tooltip-top-git"
+                    role="tooltip"
+                    class="absolute z-10 text-center invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    <span>Github</span>
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </div>
+                <div
+                  class="mx-2 p-1 hover:text-sky-500 text-sky-400 text-4xl max-sm:text-3xl"
+                >
+                  <a
+                    data-tooltip-target="tooltip-top-tw"
+                    data-tooltip-placement="top"
+                    href="https://github.com/SomeOne1305"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <div
+                    id="tooltip-top-tw"
+                    role="tooltip"
+                    class="absolute z-10 text-center invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    <span>Twitter</span>
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide relative px-4 bg-image-bg rounded-lg bg-cover bg-no-repeat bg-center"
+            >
+              <div class="absolute top-4 left-4">
+                <h2 class="font-semibold text-white text-3xl mb-3">
+                  Ahmadullo Kholmuminov
+                </h2>
+                <div class="my-3 font-bold text-lg text-center">
+                  <span class="text-white">Frontend Developer</span>
+                </div>
+                <button
+                  class="my-1 ml-[34%] px-4 mx-auto py-2 font-sans active:bg-slate-800 text-white text-lg bg-slate-900 rounded cursor-pointer"
+                >
+                  Hire me
+                </button>
+              </div>
+              <div
+                class="absolute bottom-4 right-4 p-1 flex bg-slate-100 rounded"
+              >
+                <div
+                  class="mx-2 p-1 hover:text-cyan-600 text-cyan-500 text-4xl"
+                >
+                  <a
+                    data-tooltip-target="tooltip-top-1"
+                    data-tooltip-placement="top"
+                    href="https://t.me/unnamed0000"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-telegram"></i>
+                  </a>
+                  <div
+                    id="tooltip-top-1"
+                    role="tooltip"
+                    class="absolute z-10 text-center invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    <span>Telegram</span>
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </div>
+                <div
+                  class="mx-2 p-1 hover:text-slate-800 text-slate-900 text-4xl"
+                >
+                  <a
+                    data-tooltip-target="tooltip-top-git-2"
+                    data-tooltip-placement="top"
+                    href="https://github.com/SomeOne1305"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <div
+                    id="tooltip-top-git-2"
+                    role="tooltip"
+                    class="absolute z-10 text-center invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    <span>Github</span>
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </div>
+                <div class="mx-2 p-1 hover:text-sky-500 text-sky-400 text-4xl">
+                  <a
+                    data-tooltip-target="tooltip-top-tw-3"
+                    data-tooltip-placement="top"
+                    href="https://github.com/SomeOne1305"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <div
+                    id="tooltip-top-tw-3"
+                    role="tooltip"
+                    class="absolute z-10 text-center invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    <span>Twitter</span>
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Advertisement (hire me) title end -->
+
+    <!-- Music section start -->
+    <div class="w-full py-2 my-2 px-2">
+      <div class="container">
+        <div class="w-full">
+          <div
+            class="w-full grid grid-cols-6 items-center bg-gray-300 rounded-t-lg"
+          >
+            <div
+              class="p-2 col-span-2 text-lg font-semibold font-sans text-left"
+            >
+              <h3 class="ml-2">#title</h3>
+            </div>
+            <div class="p-2 text-lg font-semibold font-sans text-center">
+              <h3><i class="fa fa-music-note"></i></h3>
+            </div>
+            <div class="p-2 text-lg font-semibold font-sans text-center">
+              <h3><i class="fa-regular fa-eye"></i></h3>
+            </div>
+            <div class="p-2 text-lg font-semibold font-sans text-center">
+              <h3><i class="fa-regular fa-clock"></i></h3>
+            </div>
+            <div class="p-2 text-lg font-semibold font-sans text-center"></div>
+          </div>
+          <div
+            class="w-full grid grid-cols-6 items-center border-y border-x-0 border-y-gray-300"
+            role="listitem"
+          >
+            <div class="h-full col-span-2 p-1 grid grid-cols-4">
+              <div class="h-full p-1 flex justify-center items-center">
+                <button
+                  class="w-11 h-11 max-md:w-8 max-md:h-8 rounded-full bg-blue-700 text-white flex justify-center items-center"
+                >
+                  <i class="fa fa-play"></i>
+                </button>
+              </div>
+              <div class="max-h-full">
+                <img class="w-full h-full rounded" src="./img.jpg" alt="" />
+              </div>
+              <div class="h-full p-1 text-center col-span-2 overflow-hidden">
+                <h3 class="overflow-ellipsis font-bold text-lg">Jamney ddd</h3>
+                <span class="overflow-ellipsis text-base text-gray-700"
+                  >hello worlds</span
+                >
+              </div>
+            </div>
+            <div class="h-full p-1 flex justify-center items-center">
+              <span class="text-gray-800 text-base font-semibold"
+                >loremssx</span
+              >
+            </div>
+            <div class="h-full p-1 flex justify-center items-center">
+              <span class="text-gray-800 text-base font-semibold">3.1 k</span>
+            </div>
+            <div class="h-full p-1 flex justify-center items-center">
+              <span class="text-gray-800 text-base font-semibold">03:40</span>
+            </div>
+            <div class="h-full p-1 flex items-center justify-center">
+              <a href="">
+                <div
+                  class="w-full px-3 py-2 text-white text-lg text-center font-semibold rounded bg-green-500 capitalize"
+                >
+                  download
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Music section end -->
+
+    <!-- Music player start -->
+    <div
+      class="w-full p-1 fixed left-0 bottom-0 bg-white shadow shadow-black z-30"
+    >
+      <div class="w-full p-1 flex items-center justify-between">
+        <img class="h-14 w-16 rounded" src="./img.jpg" alt="" />
+        <div class="p-2 text-center">
+          <h3 class="font-bold dark:text-white text-lg">Tom odell</h3>
+          <span class="text-base dark:text-yellow-50">Another love</span>
+        </div>
+        <div class="ml-2 flex items-center">
+          <div class="px-2 text-lg">
+            <i class="fa-regular fa-backward"></i>
+          </div>
+          <div class="px-2 text-lg">
+            <i class="fa-regular fa-play"></i>
+          </div>
+          <div class="px-2 text-lg">
+            <i class="fa-regular fa-forward"></i>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <span class="text-sm mr-2">01:43</span>
+          <div class="w-[40vw] h-1 rounded-lg bg-slate-300">
+            <div class="w-[34%] h-full rounded-lg bg-black dark:bg-white"></div>
+          </div>
+          <span class="text-sm ml-2">04:43</span>
+        </div>
+        <!-- <div class="ml-2">
+          <div class="mr-2"><i class="fa fa-volume"></i></div>
+          <input type="range" name="sound" id="sound" class="appearance-none w-[7vw] h-1 bg-gray">
+        </div> -->
+        <input
+          type="range"
+          name=""
+          id="range"
+          minlength="1"
+          maxlength="100"
+          value="100"
+          class="slider"
+          style="
+            background: linear-gradient(
+              to right,
+              rgb(252, 238, 126) 0%,
+              rgb(252, 238, 126) 100%,
+              transparent 100%,
+              transparent 100%
+            );
+          "
+        />
+      </div>
+    </div>
+    <!-- Music player end -->
+    <!-- Search page start -->
+    <div class="w-full">
+      <div class="container p-1">
+        <form class="flex items-center">
+          <label for="voice-search" class="sr-only">Search</label>
+          <div class="relative w-full">
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="voice-search"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Search Mockups, Logos, Design Templates..."
+              required
+            />
+            <button
+              type="button"
+              class="absolute inset-y-0 right-0 flex items-center pr-3"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <button
+            type="submit"
+            class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5 mr-2 -ml-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path></svg
+            >Search
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- Search page end -->
+    <!-- Footer start -->
+    <footer class="w-full bg-blue-900 mb-24">
+      <div class="container p-1">
+        <div class="w-full text-center">
+          <span class="text-base text-white">All rights reserved</span>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+    <!-- Swiper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      let par = document.querySelector("#par");
+      let el = document.querySelector("#el");
+      par.addEventListener("click", () => {
+        el.classList.replace(
+          el.classList.contains("invisible") ? "invisible" : "visible",
+          el.classList.contains("invisible") ? "visible" : "invisible"
+        );
+      });
+      document.addEventListener("click", (e) => {
+        if (e.target !== par && e.target !== el && !el.contains(e.target)) {
+          el.classList.replace("visible", "invisible");
+        }
+      });
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 30000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+  </body>
+</html>
